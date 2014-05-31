@@ -52,7 +52,6 @@ digraph AgentEnabled {
   "[validate_token]"
   "[disable_backtrace_cleanup]"
   "[disable_activerecord_instrumentation]"
-  "[disable_dj]"
   "[capture_memcache_keys]"
   "[disable_memcache_instrumentation]"
   "[disable_view_instrumentation]"
@@ -254,8 +253,6 @@ digraph AgentEnabled {
 
   "ActiveRecord#depends_on" -> "[disable_activerecord_instrumentation]"
 
-  "DelayedJobInstrumentation#depends_on" -> "[disable_dj]"
-
   "Memcache#memcache_key_snippet" -> "[capture_memcache_keys]"
   "Memcache#depends_on" -> "[disable_memcache_instrumentation]"
 
@@ -263,8 +260,6 @@ digraph AgentEnabled {
   "Rails3::ActionController#depends_on" -> "[disable_view_instrumentation]"
   "Resque#depends_on" -> "[disable_resque]"
 
-  "DelayedJobSampler#initialize" -> "[disable_dj]"
-  "DelayedJobInjection#depends_on" -> "[disable_dj]"
   "DelayedJobInjection#executes" -> "Control#init_plugin"
 
   "MetricFrame.update_apdex" -> "[apdex_t]"

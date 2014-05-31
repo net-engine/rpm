@@ -162,13 +162,13 @@ module NewRelic
         :url         => "https://rubygems.org/gems/sidekiq",
         :feed        => "https://rubygems.org/gems/sidekiq/versions.atom"
       },
-      :delayed_job =>
-      {
-        :type        => :background,
-        :supported   => ["~>2.0", "~>3.0", "~>4.0"],
-        :url         => "https://rubygems.org/gems/delayed_job",
-        :feed        => "https://rubygems.org/gems/delayed_job/versions.atom"
-      },
+      # :delayed_job =>
+      # {
+      #   :type        => :background,
+      #   :supported   => ["~>2.0", "~>3.0", "~>4.0"],
+      #   :url         => "https://rubygems.org/gems/delayed_job",
+      #   :feed        => "https://rubygems.org/gems/delayed_job/versions.atom"
+      # },
 
       # HTTP Clients
       :curb =>

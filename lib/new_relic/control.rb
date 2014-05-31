@@ -22,7 +22,7 @@ require 'new_relic/control/class_methods'
 require 'new_relic/control/instance_methods'
 
 require 'new_relic/agent'
-require 'new_relic/delayed_job_injection'
+# require 'new_relic/delayed_job_injection'
 
 module NewRelic
 

@@ -522,12 +522,12 @@ module NewRelic
           :type => Boolean,
           :description => 'Enable or disable sidekiq instrumentation.'
         },
-        :disable_dj => {
-          :default => false,
-          :public => true,
-          :type => Boolean,
-          :description => 'Enable or disable delayed job instrumentation.'
-        },
+        # :disable_dj => {
+        #   :default => false,
+        #   :public => true,
+        #   :type => Boolean,
+        #   :description => 'Enable or disable delayed job instrumentation.'
+        # },
         :disable_sinatra => {
           :default => false,
           :public => true,
@@ -947,13 +947,13 @@ module NewRelic
           :dynamic_name => true,
           :description  => 'Controls whether the CPU sampler is enabled. This sampler periodically samples the CPU usage of the host process.'
         },
-        :disable_delayed_job_sampler => {
-          :default      => false,
-          :public       => true,
-          :type         => Boolean,
-          :dynamic_name => true,
-          :description  => 'Controls whether the Delayed Job sampler is enabled. This sampler periodically measures the depth of Delayed Job queues.'
-        },
+        # :disable_delayed_job_sampler => {
+        #   :default      => false,
+        #   :public       => true,
+        #   :type         => Boolean,
+        #   :dynamic_name => true,
+        #   :description  => 'Controls whether the Delayed Job sampler is enabled. This sampler periodically measures the depth of Delayed Job queues.'
+        # },
         :disable_active_record_4 => {
           :default      => false,
           :public       => true,

@@ -81,7 +81,6 @@ module NewRelic
         glassfish
         resque
         sidekiq
-        delayed_job
         puma
         thin
         mongrel
@@ -155,11 +154,11 @@ module NewRelic
       end
     end
 
-    def check_for_delayed_job
-      if $0 =~ /delayed_job$/ || (File.basename($0) == 'rake' && ARGV.include?('jobs:work'))
-        @discovered_dispatcher = :delayed_job
-      end
-    end
+    # def check_for_delayed_job
+    #   if $0 =~ /delayed_job$/ || (File.basename($0) == 'rake' && ARGV.include?('jobs:work'))
+    #     @discovered_dispatcher = :delayed_job
+    #   end
+    # end
 
     def check_for_resque
       using_resque = (
